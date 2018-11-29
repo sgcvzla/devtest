@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Prueba obj</title>
+	<link rel="stylesheet" href="">
+	<script src="objetos.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		* {
+			margin: 0;
+			padding:1em;
+		}
+		#container {
+			padding: 1em;
+			margin: auto;
+			width: 80vw;
+			background: yellow;
+			display: grid;
+		    grid-template-areas:  "lista campos"
+                          		"lista botones";
+			grid-gap: 0.5em;
+		}
+		.lista {
+		    grid-area: lista;
+		    grid-row-start: 1;
+		    grid-row-start: 2;
+		    /*height: 100%;*/
+			list-style-type: none;
+			border: solid;
+		}
+		.elemento-lista {
+			background: lightblue;
+		}
+		.elemento-lista:nth-child(even) {
+			background: gray;
+  		}
+		.cmps {
+			border: solid;
+		    grid-area: campos;
+			display: inline;
+			background: gray;
+		}
+		.btns {
+			padding: 0;
+		    grid-area: botones;
+			text-align: right;
+			background: cyan;
+		}
+	</style>
+</head>
+<body onload="crear_forma()">
+	<div id="container">
+		<div id="tabla" style="padding:0;height:100%;">
+		<ul class="lista">
+			<li class="elemento-lista"><a style="padding:0;text-decoration:none;" href="">Uno</a></li>
+			<li class="elemento-lista"><a style="padding:0;" href="">Dos</a></li>
+			<li class="elemento-lista"><a style="padding:0;" href="">Tres</a></li>
+			<li class="elemento-lista"><a style="padding:0;" href="">Cuatro</a></li>
+		</ul>		
+			
+		</div>
+		<div id="campos" class="cmps"></div>
+		<div id="botones" class="btns"></div>
+	</div>
+<!-- -->
+<!-- -->
+<script type="text/javascript" charset="utf-8">
+function crear_forma() {
+	cmp_prueb1 = new cCampo('cmp1','campos','campo de prueba 1','text',25,'xyz',true);
+	cmp_prueb2 = new cCampo('cmp2','campos','campo de prueba 2','date',10,'2018-08-08',true);
+	cmp_prueb3 = new cCampo('cmp3','campos','campo de prueba 3','checkbox',25,'xyz',true);
+	cmp_prueb4 = new cCampo('cmp4','campos','campo de prueba 4','radio',25,'xyz',true);
+
+	aCampos = [cmp_prueb1,cmp_prueb2,cmp_prueb3,cmp_prueb4]
+
+	btn_aceptar = new cBoton('btn1','botones','Agregar','',true, function() { guardar(aCampos) });
+	btn_cancelar = new cBoton('btn2','botones','Modificar','',true,function() { cambiar(aCampos) });
+	btn_cancelar = new cBoton('btn2','botones','Borrar','',true,function() { eliminar(aCampos) });
+	btn_cancelar = new cBoton('btn2','botones','Salir','',true,salir);
+}
+
+function guardar(aCampos) { 
+	for (var i = 0; i < aCampos.length; i++) {
+		aCampos[i].valor = document.getElementById(aCampos[i].id).value;
+		console.log('guardar '+aCampos[i].valor);
+	}
+}
+
+function cambiar(aCampos) { 
+	for (var i = 0; i < aCampos.length; i++) {
+		aCampos[i].valor = document.getElementById(aCampos[i].id).value;
+		console.log('cambiar '+aCampos[i].valor);
+	}
+}
+
+function eliminar(aCampos) { 
+	for (var i = 0; i < aCampos.length; i++) {
+		aCampos[i].valor = document.getElementById(aCampos[i].id).value;
+		console.log('eliminar '+aCampos[i].valor);
+	}
+}
+
+function salir() {
+	alert('salir de la aplicación');
+}
+</script>
+</body>
+</html>
