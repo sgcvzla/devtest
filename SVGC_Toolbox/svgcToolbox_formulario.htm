@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formulario v0.0.1</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="ej.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" 
+	type="image/x-icon" 
+	href="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/WPVG_icon_2016.svg/1024px-WPVG_icon_2016.svg.png">
+	<script src="jquery.js"></script>
+	<script type="text/javascript" src="js.js"></script>
+
+</head>
+<body>
+    <div class="head">
+    	<div class="title">
+			<h1 >SVGC Toolbox</h1>
+		</div>
+		<div class="taskBar">
+			<ul >
+				<li><a href="">inicio</a></li>
+				<li><a href="http://localhost/proyectos/pruevas/prueva.html">Tablas</a> </li>
+				<li><a href="">formularios</a></li>
+			</ul>
+		</div>
+    </div>
+	
+
+
+	<div class="DivForm">
+		<div class="space"></div>
+		<div class="DivForm2">
+			<form method="post" class="form">
+				<div class="formtop">
+						<div class="fila">
+							<div class="coll-25">
+								<label>textos</label>
+							</div>
+							<div class="col-75">
+								<input class="input" type="text" name="a" > 
+							</div>
+						</div>
+						<div class="fila">
+							<div class="coll-25">
+								<label>numeros</label> 
+							</div>
+							<div class="col-75">
+								<input class="input" type="number" name="a">
+							</div>
+						</div>
+						<div class="fila">
+							<div class="coll-25">
+								<label>fechas</label> 
+							</div>	
+							<div class="col-75">
+								<input class="input" type="date" name="a">
+							</div>					
+						</div>
+						<div class="fila">
+							<div class="coll-25">
+								<label>lista</label> 
+							</div>
+							<div class="col-75">
+								<select class="input">
+								   <option value="volvo">Volvo</option>
+								   <option value="volvo">Volvo</option>
+								   <option value="volvo">Volvo</option>
+								   <option value="volvo">Volvo</option>
+								   <option value="volvo">Volvo</option>
+								</select>		
+							</div>
+						</div>		
+				</div>
+				<div class="boton">
+					<div class="interBoton">
+						<input type="button" name="" value="boton" onclick="colapse()">
+					</div>
+				</div>	
+			</form>
+		</div>
+		<div class="consult">
+		    <div class="buscador">
+		    	<input type="text" name="buscarTXT">
+		    	<input type="button" name="buscar" value="Buscar">
+		    </div>
+		    <div class="space"></div>
+			<table class="tab">
+				<tr>
+					<td class="rows">campo 1</td>
+					<td class="rows">campo 2</td>
+					<td class="rows">campo 3</td>
+					<td class="rows">campo 4</td>
+				</tr>
+				<tr>
+					<td class="rows">123456789</td>
+					<td class="rows">123456789</td>
+					<td class="rows">123456789</td>
+					<td class="rows">123456789</td>
+				</tr>
+				<tr>
+					<td class="rows">123456789</td>
+					<td class="rows">123456789</td>
+					<td class="rows">123456789</td>
+					<td class="rows">123456789</td>
+				</tr>
+			</table>
+			<div class="actions">
+				<input type="button" name="ingresar" value="ingresar" onclick="colapse()">
+				<input type="button" name="editar" value="editar">
+				<input type="button" name="eliminar" value="eliminar">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

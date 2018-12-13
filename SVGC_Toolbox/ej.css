@@ -1,0 +1,220 @@
+﻿
+body{
+	margin: 0;
+	padding: 0;
+}
+
+
+input[type=text]{
+  width: 80%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input[type=number]{
+  width: 80%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input[type=date]{
+  width: 80%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+select{
+  width: 80%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input[type=button]{
+	background-color: #999;
+  	color: white;
+  	padding: 12px 20px;
+  	border: none;
+  	border-radius: 4px;
+  	cursor: pointer;
+}
+ul{
+	list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #546;
+
+}
+
+li{
+	display: inline-grid;
+	float:left;
+}
+
+li a{
+	display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+
+/***********FORMULARIO***********************************************************************/
+.formtop{
+    padding:1% 10%;
+    background-color: #3399ff;
+}
+.coll-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+/* Clear floats after the columns */
+.fila:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.boton{
+    /*padding:5.5em 2em;*/
+    bottom: 0;
+}
+.interBoton{
+	width: 100%;
+	padding-left: 8%;
+}
+/******************************************************************************************/
+
+.head{
+	position: fixed;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	display: inline-grid;
+		z-index: 1;
+
+}
+
+.space{
+	width: 100%;
+}
+
+.title{
+	top: 0;
+	background-color: #ff4d4d;
+}
+
+.title,h1{
+	padding: 0;
+	top: 0;
+}
+
+.taskBar{
+	top: 0;
+	width: 100%;
+}
+
+.DivForm{
+		
+
+}
+
+.DivForm2{
+	z-index: 0;
+	position: relative;
+	bottom: 0;
+	width:50%;
+	height: 13em;
+	background: #0066ff;
+	float: right;
+	display: inherit;
+}
+
+.input{
+	display: list-item;
+	list-style: none;
+	float: right;
+}
+
+
+.consult{
+	height: 14em;
+	width:50%; 
+	background: #ffff00;
+	display:inherit;
+	bottom: 0;
+
+}
+
+.buscador{
+	background:  #003366;
+	position: fixed;
+	width: 50%;
+}
+
+.tab{
+	width: 100%;
+	border-spacing: 0;
+}
+
+.rows{
+	height: 30px;
+	background: #00ff00;
+	padding: 0;
+	margin: 0;
+	border-style:solid;
+	border-width: 1px;
+	border-color: #118911;
+}
+
+.actions{
+	position: fixed;
+	background:  #6600cc;
+	bottom: 0;
+	width: 50%;
+}
+
+
+@media screen and (max-width: 790px){
+	.DivForm2{
+		width:100%;
+		float: none;
+		display: none;
+	}
+
+	.consult{
+		width:100%; 
+	}
+
+	.actions{
+		width: 100%;
+	}
+
+	.buscador{
+		width: 100%;
+	}
+
+}
