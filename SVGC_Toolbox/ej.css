@@ -1,4 +1,4 @@
-﻿
+
 body{
 	margin: 0;
 	padding: 0;
@@ -17,6 +17,7 @@ input[type=text]{
 input[type=number]{
   width: 80%;
   padding: 5px;
+
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -42,7 +43,7 @@ select{
 input[type=button]{
 	background-color: #999;
   	color: white;
-  	padding: 12px 20px;
+  	padding: 1em 1.5em;
   	border: none;
   	border-radius: 4px;
   	cursor: pointer;
@@ -164,8 +165,10 @@ label {
 	height: 14em;
 	width:50%; 
 	background: #ffff00;
-	display:inherit;
+	display:flex;
 	bottom: 0;
+	flex-direction: column;
+
 
 }
 
@@ -173,14 +176,23 @@ label {
 	background:  #003366;
 	position: fixed;
 	width: 50%;
+	overflow: hidden;
 }
 
-.tab{
+.tabContiner{
+	overflow-x: auto;
+	background: #66ffff;
+	flex-grow: 80;
+	
+}
+
+table{
 	width: 100%;
 	border-spacing: 0;
 }
 
-.rows{
+td{
+
 	height: 30px;
 	background: #00ff00;
 	padding: 0;
@@ -191,10 +203,9 @@ label {
 }
 
 .actions{
-	position: fixed;
 	background:  #6600cc;
 	bottom: 0;
-	width: 50%;
+	width: 100%;
 }
 
 
@@ -217,4 +228,28 @@ label {
 		width: 100%;
 	}
 
+
+	input[type=button]{
+	  	padding:1.5%;
+	}
+}
+
+@media screen and (max-width: 412px){
+
+
+	.coll-25 {
+	  text-align: center;
+	  padding-left: 0;
+      width: 100%;
+
+	}
+	.col-75 {
+	  	  padding-left: 0;
+
+      width: 100%;
+
+	}
+	input[type=button]{
+	  	padding:1%;
+	}
 }
